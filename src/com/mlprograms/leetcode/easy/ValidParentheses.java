@@ -14,7 +14,7 @@ public class ValidParentheses {
                 stack.push(']');
             } else if (character == '{') {
                 stack.push('}');
-            } else if (stack.pop() != character) {
+            } else if (stack.isEmpty() || stack.pop() != character) {
                 return false;
             }
         }
