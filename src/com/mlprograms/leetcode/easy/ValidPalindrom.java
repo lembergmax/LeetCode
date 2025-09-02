@@ -26,9 +26,9 @@ public class ValidPalindrom {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
-        System.out.println(isPalindrome("race a car"));
-        System.out.println(isPalindrome(" "));
+        System.out.println(isPalindrome("A man, a plan, a canal: Panama")); // true
+        System.out.println(isPalindrome("race a car"));                     // false
+        System.out.println(isPalindrome(" "));                              // true
     }
 
 }
