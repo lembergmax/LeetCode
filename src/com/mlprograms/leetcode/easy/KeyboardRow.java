@@ -34,10 +34,9 @@ public class KeyboardRow {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"})));
-        // [" Alaska"," Papa "]
-        System.out.println(Arrays.toString(findWords(new String[]{"omk"})));
-        System.out.println(Arrays.toString(findWords(new String[]{"adsdf", "sfd"})));
+        System.out.println(Arrays.toString(findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"})));    // [Alaska, Dad]
+        System.out.println(Arrays.toString(findWords(new String[]{"omk"})));                                // []
+        System.out.println(Arrays.toString(findWords(new String[]{"adsdf", "sfd"})));                       // [adsdf, adsdf]
     }
 
 }
