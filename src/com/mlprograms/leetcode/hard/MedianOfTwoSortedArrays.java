@@ -22,8 +22,8 @@ public class MedianOfTwoSortedArrays {
     }
 
     public static void main(String[] args) {
-        System.out.println(findMedianSortedArrays(new int[]{1, 3}, new int[]{2, 4, 5}));
-        System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));
+        System.out.println(findMedianSortedArrays(new int[]{1, 3}, new int[]{2, 4, 5}));    // 3.0
+        System.out.println(findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}));       // 2.0
     }
 
 }
