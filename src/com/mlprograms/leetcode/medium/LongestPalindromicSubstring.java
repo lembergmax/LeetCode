@@ -10,7 +10,7 @@ public class LongestPalindromicSubstring {
         int start = 0;
         int maxLength = 1;
 
-        // i know, i know, its duplicated code but who cares on a leetcode problem :)
+        // i know, i know, its duplicated code but who cares at a leetcode problem :)
         for (int i = 0; i < s.length(); i++) {
             // odd palindrome
             int left = i;
