@@ -45,9 +45,9 @@ public class ZigZagConversion {
     }
 
     public static void main(String[] args) {
-        System.out.println(convert("PAYPALISHIRING", 3));
-        System.out.println(convert("PAYPALISHIRING", 4));
-        System.out.println(convert("A", 1));
+        System.out.println(convert("PAYPALISHIRING", 3));   // PAHNAPLSIIGYIR
+        System.out.println(convert("PAYPALISHIRING", 4));   // PINALSIGYAHRPI
+        System.out.println(convert("A", 1));                // A
     }
 
 }
