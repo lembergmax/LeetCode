@@ -1,7 +1,5 @@
 package com.mlprograms.leetcode.medium;
 
-import java.util.Arrays;
-
 public class ZigZagConversion {
 
     public static String convert(String s, int numRows) {
