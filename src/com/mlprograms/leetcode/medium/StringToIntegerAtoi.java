@@ -3,26 +3,39 @@ package com.mlprograms.leetcode.medium;
 public class StringToIntegerAtoi {
 
     public static int myAtoi(String s) {
-        int startingIndex = 0;
-        int endIndex = 0;
-        char currentCharacter;
-        for (int i = 0; i < s.length() - 1; i++) {
-            currentCharacter = s.charAt(i);
-            if (!Character.isDigit(currentCharacter) && currentCharacter != '-' && currentCharacter != '+') {
-                startingIndex = i + 1;
-            }
-        }
-        for (int i = startingIndex; i < s.length(); i++) {
-            currentCharacter = s.charAt(i);
-            if (!Character.isDigit(currentCharacter)) {
-                break;
-            }
-            endIndex = i + 1;
+        if (s == null || s.isEmpty()) {
+            return 0;
         }
 
-        System.out.println(startingIndex + ", " + endIndex);
-        System.out.println(s.substring(startingIndex, endIndex));
-        return 0;
+        int index = 0;
+        int length = s.length();
+
+        while (index < length && s.charAt(index) == ' ') {
+            index++;
+        }
+
+        int sign = 1;
+        if (index < length && (s.charAt(index) == '+' || s.charAt(index) == '-')) {
+            sign = (s.charAt(index) == '-') ? -1 : 1;
+            index++;
+        }
+
+        long result = 0;
+        while (index < length && Character.isDigit(s.charAt(index))) {
+            int digit = s.charAt(index) - '0';
+            result = result * 10 + digit;
+
+            if (sign == 1 && result > Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
+            }
+            if (sign == -1 && -result < Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
+            }
+
+            index++;
+        }
+
+        return (int) (result * sign);
     }
 
     public static void main(String[] args) {
