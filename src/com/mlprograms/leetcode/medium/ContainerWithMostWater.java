@@ -4,13 +4,20 @@ public class ContainerWithMostWater {
 
     public static int maxArea(int[] height) {
         int maxArea = 0;
-        for (int i = 0; i < height.length; i++) {
-            for (int j = 0; j < height.length; j++) {
-                if (i == j) {
-                    continue;
-                }
+        int pointerLeft = 0;
+        int pointerRight = height.length - 1;
+        int heightPointerLeft;
+        int heightPointerRight;
 
-                maxArea = Math.max(maxArea, Math.min(height[i], height[j]) * Math.abs(i - j));
+        while (pointerLeft < pointerRight) {
+            heightPointerLeft = height[pointerLeft];
+            heightPointerRight = height[pointerRight];
+            maxArea = Math.max(maxArea, Math.min(heightPointerLeft, heightPointerRight) * Math.abs(pointerLeft - pointerRight));
+
+            if (heightPointerLeft < heightPointerRight) {
+                pointerLeft++;
+            } else {
+                pointerRight--;
             }
         }
 
@@ -18,7 +25,8 @@ public class ContainerWithMostWater {
     }
 
     public static void main(String[] args) {
-        maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7});
+        System.out.println(maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
+        System.out.println(maxArea(new int[]{1, 1}));
     }
 
 }
