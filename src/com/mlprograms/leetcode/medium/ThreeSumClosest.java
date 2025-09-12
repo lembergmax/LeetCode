@@ -1,9 +1,35 @@
 package com.mlprograms.leetcode.medium;
 
+import java.util.Arrays;
+
 public class ThreeSumClosest {
 
     public static int threeSumClosest(int[] nums, int target) {
-        return 0; // TODO: implement
+        Arrays.sort(nums);
+
+        int length = nums.length;
+        int previvousDifference = Integer.MAX_VALUE;
+        int result = 0;
+
+        for (int i = 0; i < length; i++) {
+            int pointerJ = i + 1;
+            int pointerK = length - 1;
+
+            while (pointerJ < pointerK) {
+                int sum = nums[i] + nums[pointerJ] + nums[pointerK];
+                if (Math.abs(sum - target) < previvousDifference) {
+                    previvousDifference = Math.abs(sum - target);
+                    result = sum;
+                }
+
+                if (sum > target) {
+                    pointerK--;
+                } else {
+                    pointerJ++;
+                }
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
