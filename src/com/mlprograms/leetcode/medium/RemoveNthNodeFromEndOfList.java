@@ -23,14 +23,16 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     public static void main(String[] args) {
-        ListNode head1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-        System.out.println(ListNode.toString(removeNthFromEnd(head1, 2))); // [1, 2, 3, 5]
+        ListNode head;
 
-        ListNode head2 = new ListNode(1);
-        System.out.println(ListNode.toString(removeNthFromEnd(head2, 1))); // []
+        head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        System.out.println(ListNode.toString(removeNthFromEnd(head, 2))); // [1, 2, 3, 5]
 
-        ListNode head3 = new ListNode(1, new ListNode(2));
-        System.out.println(ListNode.toString(removeNthFromEnd(head3, 1))); // []
+        head = new ListNode(1);
+        System.out.println(ListNode.toString(removeNthFromEnd(head, 1))); // []
+
+        head = new ListNode(1, new ListNode(2));
+        System.out.println(ListNode.toString(removeNthFromEnd(head, 1))); // [1]
     }
 
 }
