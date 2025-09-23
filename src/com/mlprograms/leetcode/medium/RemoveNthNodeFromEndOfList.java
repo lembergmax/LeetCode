@@ -2,6 +2,7 @@ package com.mlprograms.leetcode.medium;
 
 import com.mlprograms.leetcode.helper.ListNode;
 
+// https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 public class RemoveNthNodeFromEndOfList {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {

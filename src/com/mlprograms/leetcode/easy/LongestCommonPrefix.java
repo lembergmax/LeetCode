@@ -3,6 +3,7 @@ package com.mlprograms.leetcode.easy;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://leetcode.com/problems/longest-common-prefix/
 public class LongestCommonPrefix {
 
     public static String longestCommonPrefix(String[] strs) {

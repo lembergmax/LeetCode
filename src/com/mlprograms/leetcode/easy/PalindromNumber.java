@@ -1,5 +1,6 @@
 package com.mlprograms.leetcode.easy;
 
+// https://leetcode.com/problems/palindrome-number/
 public class PalindromNumber {
 
     public static boolean isPalindrome(int x) {

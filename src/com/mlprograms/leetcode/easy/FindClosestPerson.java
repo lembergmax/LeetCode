@@ -1,5 +1,6 @@
 package com.mlprograms.leetcode.easy;
 
+// https://leetcode.com/problems/find-closest-person/
 public class FindClosestPerson {
 
     public static int findClosest(int x, int y, int z) {
