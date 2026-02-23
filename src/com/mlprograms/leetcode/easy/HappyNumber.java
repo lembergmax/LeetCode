@@ -10,18 +10,20 @@ public class HappyNumber {
 
         while (n != 1 && !seenNumbers.contains(n)) {
             seenNumbers.add(n);
-
-            int sum = 0;
-            while (n != 0) {
-                final int digit = n % 10;
-                sum += digit * digit;
-                n /= 10;
-            }
-
-            n = sum;
+            n = getSquareOfSumOfDigits(n);
         }
 
         return n == 1;
+    }
+
+    private static int getSquareOfSumOfDigits(int n) {
+        int sum = 0;
+        while (n != 0) {
+            final int digit = n % 10;   // letzte Zahl holen
+            sum += digit * digit;       // quadrieren und zur Summe hinzufügen
+            n /= 10;                    // letztes Zeichen entfernen
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
